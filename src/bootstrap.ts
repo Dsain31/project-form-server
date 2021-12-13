@@ -7,6 +7,7 @@ import { OrganizationController } from "./api/controller/organization.controller
 import { CategoryController } from "./api/controller/category.controller";
 import { ActivityController } from "./api/controller/activity.controller";
 import { UploaderController } from "./api/controller/uploader.controller";
+import { ProjectFormController } from "./api/controller/project-form.controller";
 class Bootstrap extends AppExpress {
   private readonly httpServer: http.Server;
   constructor(app: express.Express) {
@@ -33,4 +34,6 @@ bootstrap.express.get("/category_list", CategoryController.getCategoryList);
 bootstrap.express.get("/activity_list", ActivityController.getActivityList);
 bootstrap.express.post("/upload", UploaderController.uploadImage);
 bootstrap.express.post("/upload/delete", UploaderController.deleteImage);
+bootstrap.express.post("/project_form", ProjectFormController.createProjectForm);
+bootstrap.express.get("/project_form/get", ProjectFormController.getProjectForm);
 export default bootstrap.express;
