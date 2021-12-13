@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import { MulterUploader } from "./multer.uploader";
 export class AppExpress {
   private readonly _express: express.Express;
   constructor(app: express.Express) {
@@ -11,6 +12,8 @@ export class AppExpress {
       methods: "GET, PUT, POST",
       optionsSuccessStatus: 204
     }))
+    this._express.use(MulterUploader.any())
+    this._express.use(express.static(__dirname + "/../../public"));
   }
 
   get express() {
