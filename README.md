@@ -2,7 +2,7 @@
 
 ## Description
 This is backend server api for Project management.
-Used own kid of logic for routing and make own library in NodeJS.
+Used own kind of logic for routing and make own library in NodeJS.
 
 ## Requirements
 Node version 12.20 at least
