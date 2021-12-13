@@ -30,7 +30,7 @@ To import CSV file from database directory into mongodb database used below comm
     `mongoimport -d <databaseName> -c <collectionName> --type CSV --file <filename.csv> --headerline`
 
     Example
-     `mongoimport -d demo -c Activities --type CSV --file activities.csv --headerline`
+     mongoimport -d demo -c Activities --type CSV --file activities.csv --headerline
 
 
 ## Why use these packages?
